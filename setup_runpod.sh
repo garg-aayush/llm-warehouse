@@ -40,10 +40,10 @@ source ~/.bashrc
 echo "Creating conda env"
 conda create -n $env_name python=$python_version -y
 conda activate $env_name
-pip install --no-cache-dir -r requirements.py ** \
-    MAX_JOBS=4 pip install --no-cache-dir flash-attn==2.3.6 --no-build-isolation # MAX_JOBS=4 if RAM<96GB
-    pip install --no-cache-dir jupyter && \
-    pip install --no-cache-dir openai seaborn matplotlib
+pip install --no-cache-dir -r requirements.py
+MAX_JOBS=4 pip install --no-cache-dir flash-attn==2.3.6 --no-build-isolation # MAX_JOBS=4 if RAM<96GB
+pip install --no-cache-dir jupyter wandb && \
+    pip install --no-cache-dir openai seaborn matplotlib 
 
 #############################################################################################
 # set git user
