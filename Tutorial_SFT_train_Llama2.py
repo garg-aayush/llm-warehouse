@@ -13,8 +13,7 @@ from peft import LoraConfig, PeftModel, prepare_model_for_kbit_training
 from trl import SFTTrainer
 
 # get or add the Huggingface token key (a)
-HF_TOKEN =  "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"
-# HF_TOKEN = os.environ["HF_TOKEN"]
+HF_TOKEN = os.environ["HF_TOKEN"]
 
 
 dataset_name = "garg-aayush/mini-platypus-1K"
