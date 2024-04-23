@@ -36,4 +36,6 @@ conda activate $env_name
 
 pip install --no-cache-dir -r requirements.py
 MAX_JOBS=4 pip install --no-cache-dir flash-attn==2.3.6 --no-build-isolation # MAX_JOBS=4 if RAM<96GB
-pip install --no-cache-dir jupyter openai seaborn matplotlib wandb
+pip install --no-cache-dir sentence-transformers faiss-cpu && \
+    pip install --no-cache-dir jupyter wandb && \
+    pip install --no-cache-dir openai seaborn matplotlib
